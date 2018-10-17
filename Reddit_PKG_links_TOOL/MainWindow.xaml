@@ -5,8 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Reddit_PKG_links_TOOL"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+Title="MainWindow" Height="539.473" Width="925">
     <Grid>
-        
+        <Button Content="RUN" Margin="10,25,0,0" Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Click="Button_Click"/>
+        <TextBox x:Name="Results" Height="23" Margin="10,60,0,0" TextWrapping="Wrap" Text="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+        <TabControl Margin="152,25,10.4,9.8">
+            <TabItem Header="Game" Width="80">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch">
+                    <ItemsControl x:Name="ItemDisplay">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel  />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <Button Width="150" Height="Auto" Margin="10" Click="GetButtonINFO">
+                                        <StackPanel Orientation="Vertical">
+                                            <Image Source="{Binding PKG_PIC}" Width="150" Height="Auto" VerticalAlignment="Top" Margin="0"/>
+                                            <TextBlock x:Name="title" Text="{Binding PKG_TITLE}" FontWeight="Bold" FontSize="11" TextWrapping="Wrap" LineStackingStrategy="MaxHeight" Height="40" HorizontalAlignment="Center" Margin="0,5,0,0" FontStretch="Normal" />
+                                            <TextBlock x:Name="TITLEcut" Text="{Binding PKG_TITLEcut}" Visibility="Collapsed"/>
+                                            <TextBlock x:Name="Download" Text="{Binding PKG_Download}" Visibility="Collapsed"/>
+                                            <!--<TextBlock Text="{Binding PKG_CUSA}" TextWrapping="Wrap"/>-->
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="PS2" Width="80">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch">
+                    <ItemsControl x:Name="ItemDisplay1">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel  />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <Button Width="150" Height="200" Margin="10">
+                                        <StackPanel Orientation="Vertical">
+                                            <Image Source="{Binding PKG_PIC}" Width="150" Height="Auto" VerticalAlignment="Top" Margin="0"/>
+                                            <TextBlock Text="{Binding PKG_TITLE}" FontWeight="Bold"/>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Theme" Width="80">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch">
+                    <ItemsControl x:Name="ItemDisplay2">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel  />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <Button Width="150" Height="200" Margin="10">
+                                        <StackPanel Orientation="Vertical">
+                                            <Image Source="{Binding PKG_PIC}" Width="150" Height="Auto" VerticalAlignment="Top" Margin="0"/>
+                                            <TextBlock Text="{Binding PKG_TITLE}" FontWeight="Bold"/>
+                                        </StackPanel>
+                                    </Button>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </TabItem>
+
+        </TabControl>
+        <Button Content="DOWNLOADS" HorizontalAlignment="Left" Margin="17,467,0,0" VerticalAlignment="Top" Width="113" Height="33" Click="Button_Click_1"/>
+
     </Grid>
 </Window>
+
