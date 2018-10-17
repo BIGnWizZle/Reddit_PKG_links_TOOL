@@ -2,6 +2,6 @@
 
 WARNING: This is the first Beta release:
 
-Download: [Release V1.0](https://github.com/BIGnWizZle/Reddit_PKG_links_TOOL/raw/master/Beta_Release%20V1.0.zip)
+Download: [Release V1.0](https://github.com/BIGnWizZle/Reddit_PKG_links_TOOL/raw/master/Release%20V1.0.zip)
 
 ![Example](https://github.com/BIGnWizZle/Reddit_PKG_links_TOOL/blob/master/Example.jpg)
